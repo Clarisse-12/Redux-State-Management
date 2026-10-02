@@ -1,12 +1,12 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import{rootState} from '../store/store';
+import{RootState} from '../store/store';
 import {increment, decrement, reset} from '../store/actions/counterActions';
-import styles from './Counter.module.css';
+import styles from './counter.module.css';
 
 const Counter = () => {
     const count = useSelector(
-        (state: rootState) => state.counter.value);
+        (state: RootState) => state.counter.value);
     const dispatch = useDispatch();
 
     return (
